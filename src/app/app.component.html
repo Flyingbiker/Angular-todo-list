@@ -1,15 +1,29 @@
 <div class="jumbotron">
-  <h1>Todos</h1>
+  <h1 class="text-center">Todos</h1>
   <div class="card">
-    <div class="card-body">
+    <div class="card-header">
       <form action="">
         <div class="form-group">
           <input type="text" class="form-control" name="" id="" placeholder="what needs to be done?">
         </div>
       </form>
-      <ul class="list-group d-none">
-        <li class="list-group-item"></li>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li *ngFor="let item of todoArray" class="list-group-item d-flex justify-content-between">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="item1" id="item1">
+            <label for="item1">Avec la boucle {{item}}</label>   
+          </div>
+          <button class="btn btn-danger btn-sm">X</button>       
+        </li>        
       </ul>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+      <div>
+        {{ todoArray.length }} items
+      </div>
+      <button class="btn btn-link btn-sm">Clear completed</button>
     </div>
   </div>
 </div>
