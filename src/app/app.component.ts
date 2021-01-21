@@ -17,11 +17,11 @@ export class AppComponent {
     },
     {
       title : 'item 2',
-      check: false
+      check: true
     },
     {
       title : 'item 3',
-      check: false
+      check: true
     },
     {
       title: 'item 4',

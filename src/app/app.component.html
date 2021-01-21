@@ -15,8 +15,8 @@
         <li *ngFor="let item of todoArray; let itemIndex = index" 
         class="list-group-item d-flex justify-content-between">
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" 
-            name="item1" id="item1"            >
+            <input type="checkbox" class="form-check-input" [(ngModel)]="item.check"
+             >
             <label for="item1">Avec la boucle {{item.title}}</label>   
           </div>
           <button class="btn btn-danger btn-sm"
