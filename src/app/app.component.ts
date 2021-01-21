@@ -12,8 +12,6 @@ export class AppComponent {
     'item 1',
     'item 2',
     'item 3',
-    'item 4',
-    'item 5',
   ]
   
   //: ici permet de déterminer le type de retour de la fonction 
@@ -45,11 +43,11 @@ export class AppComponent {
     }
   }
 
-  public removeItem(itemIndex : number) : void {
-    console.log(itemIndex);
+  public removeItem(index : number) : void {
+    console.log(index);
 
-    if (itemIndex !==-1){
-      this.todoArray.splice(itemIndex,1);
+    if (index !==-1 && index < this.todoArray.length){
+      this.todoArray.splice(index,1);
     }
 
   }
