@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoItem } from './todo-item';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,24 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'todo-list';
 
-  public todoArray : Array<string> = [
-    'item 1',
-    'item 2',
-    'item 3',
+  //le type TodoItem provientde l'interface todo-itemdts
+  public todoArray : Array<TodoItem> = [
+    {
+      title : 'item 1',
+      check: false
+    },
+    {
+      title : 'item 2',
+      check: false
+    },
+    {
+      title : 'item 3',
+      check: false
+    },
+    {
+      title: 'item 4',
+      check:false
+    }
   ]
   
   //: ici permet de déterminer le type de retour de la fonction 
@@ -29,9 +44,12 @@ export class AppComponent {
 
         //ici on supprime les espaces pour éviter d'insérer une ligne vide
         const str = $input.value.trim();
-        if ($input.value !== '' ) {
+        if (str !== '' ) {
           //pour pousse la valueur dans le tableau
-          this.todoArray.push($input.value);
+          this.todoArray.push({
+            title : str, 
+            check : false
+          });
   
           //pour vider le champs input
           $input.value='';
