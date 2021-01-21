@@ -15,9 +15,12 @@
         <li *ngFor="let item of todoArray; let itemIndex = index" 
         class="list-group-item d-flex justify-content-between">
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" [(ngModel)]="item.check"
-             >
-            <label for="item1">Avec la boucle {{item.title}}</label>   
+            <!-- mise en place d'un [attr.id] pour générer un ID unique +
+              [(ngModel)] pour gérer le checked du input type checkbox-->
+            <input type="checkbox" class="form-check-input"             
+              [attr.id]="'todo-check-'+itemIndex"
+              [(ngModel)]="item.check" [disabled]="item.check">
+            <label [attr.for]="'todo-check-'+itemIndex">{{item.title}}</label>   
           </div>
           <button class="btn btn-danger btn-sm"
           (click)="removeItem(itemIndex)">X</button>       
