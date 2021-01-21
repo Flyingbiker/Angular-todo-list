@@ -76,5 +76,10 @@ export class AppComponent {
         array.splice(i,1);
       }
     }
+
+    //solution 3 avec filter
+    //array = array.filter( () => {
+    // return !item.check;
+    //})
   }
 }
