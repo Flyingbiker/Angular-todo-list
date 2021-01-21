@@ -25,12 +25,32 @@ export class AppComponent {
 
       const $input : EventTarget |null = $event.target;
 
+      //comme la méthode peut être utilisée ailleur que dans le input, on test
       if ($input instanceof HTMLInputElement) {
         console.log($input.value);  
-        $input.value;      
+
+        //ici on supprime les espaces pour éviter d'insérer une ligne vide
+        const str = $input.value.trim();
+        if ($input.value !== '' ) {
+          //pour pousse la valueur dans le tableau
+          this.todoArray.push($input.value);
+  
+          //pour vider le champs input
+          $input.value='';
+
+        }        
       }
       
       console.log('Enter pressed');
     }
+  }
+
+  public removeItem(itemIndex : number) : void {
+    console.log(itemIndex);
+
+    if (itemIndex !==-1){
+      this.todoArray.splice(itemIndex,1);
+    }
+
   }
 }
