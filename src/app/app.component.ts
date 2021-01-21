@@ -70,9 +70,8 @@ export class AppComponent {
 
   }
 
-  public removeSelectedItems(array : Array<TodoItem>) : void {
-    let length = array.length;
-    for (let i=array.length-1; i > 0; i--){
+  public removeSelectedItems(array : Array<TodoItem>) : void {    
+    for (let i=array.length-1; i >= 0; i--){
       if (array[i].check === true) {
         array.splice(i,1);
       }
