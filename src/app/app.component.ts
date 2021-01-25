@@ -95,13 +95,6 @@ export class AppComponent {
     }
     return false;
   }
-
-  public setColorItem(item : TodoItem) : string {
-    if (item.check) {
-      return "grey";
-    } else {
-      return "black";
-    }
-  }
+  
 
 }
