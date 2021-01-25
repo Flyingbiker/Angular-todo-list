@@ -9,6 +9,8 @@ import { TodoItem } from './todo-item';
 export class AppComponent {
   title = 'todo-list';
 
+  public tmp = true;
+
   //le type TodoItem provientde l'interface todo-itemdts
   public todoArray : Array<TodoItem> = [
     {
@@ -82,4 +84,7 @@ export class AppComponent {
     // return !item.check;
     //})
   }
+  
+ 
+
 }

@@ -32,7 +32,13 @@
       <div>
         {{ todoArray.length }} items
       </div>
-      <button class="btn btn-link btn-sm" (click)="removeSelectedItems(todoArray)">Clear completed</button>
+
+      <input type="checkbox" [(ngModel)]="tmp">
+
+      <button *ngIf="tmp === true" class="btn btn-link btn-sm" (click)="removeSelectedItems(todoArray)">
+          Clear completed
+      </button>      
+
     </div>
   </div>
 </div>
