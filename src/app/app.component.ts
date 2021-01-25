@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Component } from '@angular/core';
 import { TodoItem } from './todo-item';
 
@@ -19,11 +20,11 @@ export class AppComponent {
     },
     {
       title : 'item 2',
-      check: true
+      check: false
     },
     {
       title : 'item 3',
-      check: true
+      check: false
     },
     {
       title: 'item 4',
@@ -85,6 +86,13 @@ export class AppComponent {
     //})
   }
   
- 
+  public get atLeastOneChecked() : boolean {
+    for (const item of this.todoArray) {
+      if (item.check){
+        return true;
+      }
+    }
+    return false;
+  }
 
 }
