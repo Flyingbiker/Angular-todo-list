@@ -79,13 +79,14 @@ export class AppComponent {
         array.splice(i,1);
       }
     }
-
     //solution 3 avec filter
     //array = array.filter( () => {
     // return !item.check;
     //})
   }
   
+  //le getter est un attribut et non pas une méthode. 
+  //D'où l'absence de () dans l'appel du html
   public get atLeastOneChecked() : boolean {
     for (const item of this.todoArray) {
       if (item.check){
@@ -93,6 +94,14 @@ export class AppComponent {
       }
     }
     return false;
+  }
+
+  public setColorItem(item : TodoItem) : string {
+    if (item.check) {
+      return "grey";
+    } else {
+      return "black";
+    }
   }
 
 }
