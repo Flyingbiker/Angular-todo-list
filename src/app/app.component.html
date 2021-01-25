@@ -21,8 +21,8 @@
             <input type="checkbox" class="form-check-input"             
               [attr.id]="'todo-check-'+itemIndex"
               [(ngModel)]="item.check" >
-
-            <label [attr.for]="'todo-check-'+itemIndex" [ngStyle]="{'color': setColorItem(item)}">{{item.title}}</label>   
+              <!-- ou [attr.class]="item.check ? 'done' : '' " -->
+            <label [attr.for]="'todo-check-'+itemIndex" [class.done]="item.check">{{item.title}}</label>   
           </div>
           <button class="btn btn-danger btn-sm"
           (click)="removeItem(itemIndex)">X</button>       
