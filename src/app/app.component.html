@@ -15,7 +15,7 @@
         <li *ngFor="let item of todoArray; let itemIndex = index" 
         class="list-group-item d-flex justify-content-between">
 
-          <app-checkbox></app-checkbox>          
+          <app-checkbox [label]="item"></app-checkbox>          
 
           <button class="btn btn-danger btn-sm"
           (click)="removeItem(itemIndex)">X</button>       

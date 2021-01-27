@@ -14,7 +14,10 @@ export class CheckboxComponent implements OnInit {
   private static counter = 0;
 
   public id : string;
-
+  @Input() //décorateur de l'attribut label
+  public label : string|null = null;
+  //ajout de la valeur null pour initialiser l'attribut (sinon il y a une erreur)
+  //c'est du au typage strict de TS
 
   constructor() { 
     this.id = 'app-checkbox-' + CheckboxComponent.counter;
