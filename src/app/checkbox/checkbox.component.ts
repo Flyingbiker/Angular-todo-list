@@ -24,8 +24,7 @@ export class CheckboxComponent implements OnInit {
   //pas besoin de mettre le type boolean car on le déclare à false après
 
   //pour faire remonter le fait de cocher la checkbox vers le parent
-  @Output()
-  public checkedChange = new EventEmitter();
+  @Output() public checkedChange = new EventEmitter();
   //le composition du nom est le nom de l'attribut + Change (nomenclature Angular)
 
   constructor() { 
