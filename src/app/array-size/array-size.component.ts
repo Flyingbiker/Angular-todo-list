@@ -13,7 +13,7 @@ export class ArraySizeComponent implements OnInit {
 
   constructor() { 
   }
-  
+
   public lengthArray():number {
     return this.arrayLength = this.array.length;
   }

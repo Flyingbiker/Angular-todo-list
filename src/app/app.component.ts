@@ -48,7 +48,7 @@ export class AppComponent {
         //ici on supprime les espaces pour éviter d'insérer une ligne vide
         const str = $input.value.trim();
         if (str !== '' ) {
-          //pour pousse la valueur dans le tableau
+          //pour pousse la valeur dans le tableau
           this.todoArray.push({
             title : str, 
             checked : false
