@@ -9,13 +9,14 @@
         </div>
       
     </div>
+
     <div class="card-body">
       <ul class="list-group">
         <!-- ajout de la boucle for  -->
         <li *ngFor="let item of todoArray; let itemIndex = index" 
         class="list-group-item d-flex justify-content-between">
 
-          <app-checkbox [label]="item"></app-checkbox>          
+          <app-checkbox [label]="item.title" [checked]="item.checked"></app-checkbox>          
 
           <button class="btn btn-danger btn-sm"
           (click)="removeItem(itemIndex)">X</button>       
@@ -23,10 +24,12 @@
 
       </ul>
     </div>
+
     <div class="card-footer d-flex justify-content-between">
       <div>
         {{ todoArray.length }} items
       </div>
+      <app-array-size [array]="todoArray"></app-array-size>
 
       <button *ngIf="atLeastOneChecked" class="btn btn-link btn-sm" (click)="removeSelectedItems(todoArray)">
           Clear completed

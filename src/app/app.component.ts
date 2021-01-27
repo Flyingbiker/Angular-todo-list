@@ -16,19 +16,19 @@ export class AppComponent {
   public todoArray : Array<TodoItem> = [
     {
       title : 'item 1',
-      check: false
+      checked: false
     },
     {
       title : 'item 2',
-      check: false
+      checked: true
     },
     {
       title : 'item 3',
-      check: false
+      checked: false
     },
     {
       title: 'item 4',
-      check:false
+      checked:false
     }
   ]
   
@@ -51,7 +51,7 @@ export class AppComponent {
           //pour pousse la valueur dans le tableau
           this.todoArray.push({
             title : str, 
-            check : false
+            checked : false
           });
   
           //pour vider le champs input
@@ -75,7 +75,7 @@ export class AppComponent {
 
   public removeSelectedItems(array : Array<TodoItem>) : void {    
     for (let i=array.length-1; i >= 0; i--){
-      if (array[i].check === true) {
+      if (array[i].checked === true) {
         array.splice(i,1);
       }
     }
@@ -89,7 +89,7 @@ export class AppComponent {
   //D'où l'absence de () dans l'appel du html
   public get atLeastOneChecked() : boolean {
     for (const item of this.todoArray) {
-      if (item.check){
+      if (item.checked){
         return true;
       }
     }
