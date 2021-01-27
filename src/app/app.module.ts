@@ -8,6 +8,8 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ArraySizeComponent } from './array-size/array-size.component';
 import { BarComponent } from './bar/bar.component';
 import { FooComponent } from './foo/foo.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ParamPageComponent } from './param-page/param-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FooComponent } from './foo/foo.component';
     CheckboxComponent,
     ArraySizeComponent,
     BarComponent,
-    FooComponent
+    FooComponent,
+    HomePageComponent,
+    ParamPageComponent
   ],
   imports: [
     BrowserModule,

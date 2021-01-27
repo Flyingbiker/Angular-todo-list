@@ -1,43 +1,8 @@
 <div class="jumbotron">
   <h1 class="text-center">Todos</h1>
-  <div class="card">
-    <div class="card-header">
-      
-        <div class="form-group">
-          <input type="text" class="form-control" name="" id="" 
-          placeholder="what needs to be done?" (keyup)="addItem($event)">
-        </div>
-      
-    </div>
-
-    <div class="card-body">
-      <ul class="list-group">
-        <!-- ajout de la boucle for  -->
-        <li *ngFor="let item of todoArray; let itemIndex = index" 
-        class="list-group-item d-flex justify-content-between">
-
-          <app-checkbox [label]="item.title" [(checked)]="item.checked"></app-checkbox>          
-
-          <button class="btn btn-danger btn-sm"
-          (click)="removeItem(itemIndex)">X</button>       
-        </li>  
-
-      </ul>
-    </div>
-
-    <div class="card-footer d-flex justify-content-between">
-      <!-- <div>
-        {{ todoArray.length }} items
-        </div> 
-        remplacé par le composant ci-dessous -->
-      <app-array-size [array]="todoArray"></app-array-size>
-
-      <button *ngIf="atLeastOneChecked" class="btn btn-link btn-sm" (click)="removeSelectedItems(todoArray)">
-          Clear completed
-      </button>      
-
-    </div>
-  </div>
+  <router-outlet></router-outlet>  
 </div>
 
-<router-outlet></router-outlet>
+<a [routerLink]="'/'"> Bar</a>
+<a [routerLink]="'/blabla'"> Foo</a>
+<a [routerLink]="[ '/params' ]" routerLinkActive="active">page de paramètres</a>
