@@ -1,8 +1,9 @@
 <div class="jumbotron">
   <h1 class="text-center">Todos</h1>
+  <div class="btn-group" role="group" class="mb-3">
+    <button type="button" class="btn btn-secondary" [routerLink]="'/'">Home Page</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="'/params'">Parameters</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="'/blabla'">Foo</button>
+  </div>
   <router-outlet></router-outlet>  
 </div>
-
-<a [routerLink]="'/'"> Bar</a>
-<a [routerLink]="'/blabla'"> Foo</a>
-<a [routerLink]="[ '/params' ]" routerLinkActive="active">page de paramètres</a>
