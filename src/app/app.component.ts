@@ -65,12 +65,9 @@ export class AppComponent {
   }
 
   public removeItem(index : number) : void {
-    console.log(index);
-
     if (index !==-1 && index < this.todoArray.length){
       this.todoArray.splice(index,1);
     }
-
   }
 
   public removeSelectedItems(array : Array<TodoItem>) : void {    

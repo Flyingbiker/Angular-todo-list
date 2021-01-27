@@ -26,9 +26,10 @@
     </div>
 
     <div class="card-footer d-flex justify-content-between">
-      <div>
+      <!-- <div>
         {{ todoArray.length }} items
-      </div>
+        </div> 
+        remplacé par le composant ci-dessous -->
       <app-array-size [array]="todoArray"></app-array-size>
 
       <button *ngIf="atLeastOneChecked" class="btn btn-link btn-sm" (click)="removeSelectedItems(todoArray)">
