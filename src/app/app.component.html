@@ -1,9 +1,11 @@
 <div class="jumbotron">
   <h1 class="text-center">Todos</h1>
-  <div class="btn-group" role="group" class="mb-3">
-    <button type="button" class="btn btn-secondary" [routerLink]="'/'">Home Page</button>
-    <button type="button" class="btn btn-secondary" [routerLink]="'/params'">Parameters</button>
-    <button type="button" class="btn btn-secondary" [routerLink]="'/blabla'">Foo</button>
+  <div class="mb-3">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-secondary" [routerLink]="'/'">Home Page</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="'/params'">Parameters</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="'/blabla'">Foo</button>
+    </div>  
   </div>
   <router-outlet></router-outlet>  
 </div>
